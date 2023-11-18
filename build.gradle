@@ -19,7 +19,7 @@ publishing {
         mavenJava(MavenPublication) {
             groupId = 'nitome-commons-model'
             artifactId = 'nitome-commons-model'
-            version = $ver
+            version = ver
             from components.java
         }
     }
