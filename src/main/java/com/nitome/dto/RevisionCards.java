@@ -14,6 +14,7 @@
 package com.nitome.dto;
 
 import com.nitome.dto.enums.GradeCode;
+import com.nitome.dto.enums.SubjectCode;
 import lombok.Data;
 
 import java.util.List;
@@ -23,7 +24,7 @@ public class RevisionCards {
 
     private String title;
 
-    private SubjectName subject;
+    private SubjectCode subject;
 
     private GradeCode grade;
 
