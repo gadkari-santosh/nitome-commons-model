@@ -15,10 +15,11 @@ repositories {
 
 publishing {
     publications {
+        def ver = "1.0" + System.getenv("GIT_RUN_NUM")
         mavenJava(MavenPublication) {
             groupId = 'nitome-commons-model'
             artifactId = 'nitome-commons-model'
-            version = '1.0.1'
+            version = $ver
             from components.java
         }
     }

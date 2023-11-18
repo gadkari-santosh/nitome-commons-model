@@ -48,3 +48,4 @@ jobs:
       env:
         USERNAME: ${{ github.actor }}
         AWS_TOKEN: ${{ secrets.AWS_TOKEN }}
+        GIT_RUN_NUM : .${{ github.run_number }}

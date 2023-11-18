@@ -2,7 +2,7 @@ package com.nitome.dto.practice;
 
 import com.nitome.dto.enums.GradeCode;
 import com.nitome.dto.enums.Offering;
-import com.nitome.dto.enums.SubjectName;
+import com.nitome.dto.enums.SubjectCode;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -12,7 +12,7 @@ import java.util.List;
 @Setter
 public class PracticeFilterCriteria {
 
-    private List<SubjectName> subjects;
+    private List<SubjectCode> subjects;
 
     private List<Long> examIds;
 

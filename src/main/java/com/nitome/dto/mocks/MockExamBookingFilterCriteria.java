@@ -15,7 +15,7 @@ package com.nitome.dto.mocks;
 
 import com.nitome.dto.enums.GradeCode;
 import com.nitome.dto.enums.MockExamMode;
-import com.nitome.dto.enums.SubjectName;
+import com.nitome.dto.enums.SubjectCode;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -28,7 +28,7 @@ public class MockExamBookingFilterCriteria {
 
     private List<String> examNames;
 
-    private List<SubjectName> subjectNames;
+    private List<SubjectCode> subjectNames;
 
     private List<Long> examIds;
 

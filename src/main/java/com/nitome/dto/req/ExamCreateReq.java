@@ -15,7 +15,7 @@ package com.nitome.dto.req;
 
 import com.nitome.dto.enums.ExamRegistrationMode;
 import com.nitome.dto.enums.Medium;
-import com.nitome.dto.enums.SubjectName;
+import com.nitome.dto.enums.SubjectCode;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -33,7 +33,7 @@ public class ExamCreateReq {
 
     private String imageName;
 
-    private SubjectName subjectNAME;
+    private SubjectCode subjectNAME;
 
     // Comma separated string of grades.
     private String grades;

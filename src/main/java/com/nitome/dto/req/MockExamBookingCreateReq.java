@@ -16,7 +16,7 @@ package com.nitome.dto.req;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.nitome.dto.enums.GradeCode;
 import com.nitome.dto.enums.MockExamMode;
-import com.nitome.dto.enums.SubjectName;
+import com.nitome.dto.enums.SubjectCode;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -54,7 +54,7 @@ public class MockExamBookingCreateReq {
 
     private GradeCode grade;
 
-    private SubjectName subjectNAME;
+    private SubjectCode subjectNAME;
 
     private String createdBy;
 }

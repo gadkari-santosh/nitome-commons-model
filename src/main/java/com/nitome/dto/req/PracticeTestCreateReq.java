@@ -2,7 +2,7 @@ package com.nitome.dto.req;
 
 import com.nitome.dto.enums.GradeCode;
 import com.nitome.dto.enums.Offering;
-import com.nitome.dto.enums.SubjectName;
+import com.nitome.dto.enums.SubjectCode;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -14,7 +14,7 @@ public class PracticeTestCreateReq {
 
     private String image;
 
-    private SubjectName subjectNAME;
+    private SubjectCode subjectNAME;
 
     private GradeCode grade;
 

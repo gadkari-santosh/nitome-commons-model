@@ -14,7 +14,7 @@
 package com.nitome.dto.practice;
 
 import com.nitome.dto.enums.GradeCode;
-import com.nitome.dto.enums.SubjectName;
+import com.nitome.dto.enums.SubjectCode;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -45,7 +45,7 @@ public class Practice {
 
     private Long authorId;
 
-    private List<SubjectName> subjects = new ArrayList<>();
+    private List<SubjectCode> subjects = new ArrayList<>();
 
     // 20+ exam set
     // 1000 practice questions etc

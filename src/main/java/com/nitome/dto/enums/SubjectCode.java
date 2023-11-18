@@ -1,6 +1,6 @@
 package com.nitome.dto.enums;
 
-public enum SubjectName {
+public enum SubjectCode {
 
     /* Don't change the id */
     MATHS("Maths"),
@@ -14,7 +14,7 @@ public enum SubjectName {
 
     String displayName;
 
-    private SubjectName(String displayName) {
+    private SubjectCode(String displayName) {
         this.displayName = displayName;
     }
 
