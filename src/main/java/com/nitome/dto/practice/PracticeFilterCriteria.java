@@ -6,11 +6,12 @@ import com.nitome.dto.enums.SubjectCode;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.io.Serializable;
 import java.util.List;
 
 @Getter
 @Setter
-public class PracticeFilterCriteria {
+public class PracticeFilterCriteria implements Serializable {
 
     private List<SubjectCode> subjects;
 

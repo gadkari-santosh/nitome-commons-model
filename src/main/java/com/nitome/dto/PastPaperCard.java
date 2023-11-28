@@ -2,16 +2,12 @@ package com.nitome.dto;
 
 import com.nitome.dto.enums.GradeCode;
 import com.nitome.dto.enums.Offering;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.math.BigDecimal;
 import java.util.List;
 
-@Getter
-@Setter
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class PastPaperCard {

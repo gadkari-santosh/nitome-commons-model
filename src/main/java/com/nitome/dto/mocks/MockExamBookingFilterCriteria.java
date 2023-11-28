@@ -19,12 +19,13 @@ import com.nitome.dto.enums.SubjectCode;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.List;
 
 @Getter
 @Setter
-public class MockExamBookingFilterCriteria {
+public class MockExamBookingFilterCriteria implements Serializable {
 
     private List<String> examNames;
 
