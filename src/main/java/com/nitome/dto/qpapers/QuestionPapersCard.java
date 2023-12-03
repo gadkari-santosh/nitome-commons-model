@@ -11,7 +11,7 @@
  * limitations under the License.
  */
 
-package com.nitome.dto.questionpapers;
+package com.nitome.dto.qpapers;
 
 import com.nitome.dto.enums.GradeCode;
 import com.nitome.dto.enums.Offering;
