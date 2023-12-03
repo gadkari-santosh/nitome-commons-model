@@ -11,16 +11,17 @@
  * limitations under the License.
  */
 
-package com.nitome.dto;
+package com.nitome.dto.profile.req;
 
-import lombok.AllArgsConstructor;
+import com.nitome.dto.profile.User;
 import lombok.Data;
-import lombok.NoArgsConstructor;
+
+import java.util.List;
 
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
-public class Grade {
-    private String code;
-    private String name;
+public class CreateProfileReq {
+
+    private User user;
+
+    private List<ProfileReq> profiles;
 }

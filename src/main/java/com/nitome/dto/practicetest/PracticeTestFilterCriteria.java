@@ -11,7 +11,7 @@ import java.util.List;
 
 @Getter
 @Setter
-public class PracticeFilterCriteria implements Serializable {
+public class PracticeTestFilterCriteria implements Serializable {
 
     private List<SubjectCode> subjects;
 

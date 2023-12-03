@@ -11,16 +11,35 @@
  * limitations under the License.
  */
 
-package com.nitome.dto.profile;
+package com.nitome.dto.questionpapers;
 
+import com.nitome.dto.enums.GradeCode;
+import com.nitome.dto.enums.Offering;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 @Data
-public class CreateProfileReq {
+@AllArgsConstructor
+@NoArgsConstructor
+public class QuestionPapersCard {
 
-    private User user;
+    private Long id;
 
-    private List<ProfileReq> profiles;
+    private String authorName;
+
+    private String image;
+
+    private String description;
+
+    private String subject;
+
+    private List<GradeCode> grades;
+
+    private BigDecimal avgRating;
+
+    private Offering offering;
 }

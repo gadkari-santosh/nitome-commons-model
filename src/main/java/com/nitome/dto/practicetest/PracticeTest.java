@@ -19,11 +19,14 @@ import lombok.Data;
 public class PracticeTest {
 
     private String id;
+
     private String title;
+
     private Integer questionSetSize;
     private Integer marks;
     private Integer durationInMin;
-    private Boolean negativeMarking;
+
     private Integer negativeMark;
 
+    private Boolean negativeMarking;
 }

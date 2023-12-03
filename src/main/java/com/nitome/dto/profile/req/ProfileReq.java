@@ -11,16 +11,18 @@
  * limitations under the License.
  */
 
-package com.nitome.dto;
+package com.nitome.dto.profile.req;
 
-import lombok.AllArgsConstructor;
+import com.nitome.dto.enums.GradeCode;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
-public class Grade {
-    private String code;
+public class ProfileReq {
+
+    private Long id;
+
     private String name;
+    private String schoolName;
+    private GradeCode grade;
+    private Long boardId;
 }

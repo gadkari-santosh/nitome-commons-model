@@ -11,18 +11,36 @@
  * limitations under the License.
  */
 
-package com.nitome.dto.profile;
+package com.nitome.dto.practicetest;
 
 import com.nitome.dto.enums.GradeCode;
-import lombok.Data;
+import com.nitome.dto.enums.Offering;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-@Data
-public class ProfileReq {
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+public class PracticeTestBookletCard {
 
     private Long id;
 
+    private String authorName;
+
+    private String image;
+
     private String name;
-    private String schoolName;
+
+    private String subjects;
+
     private GradeCode grade;
-    private Long boardId;
+
+    private Double avgRating;
+
+    private Integer totalRatings;
+
+    private Offering offering;
 }

@@ -11,7 +11,7 @@
  * limitations under the License.
  */
 
-package com.nitome.dto.academics.req;
+package com.nitome.dto.profile.req;
 
 import lombok.Data;
 
