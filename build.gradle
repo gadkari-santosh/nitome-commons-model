@@ -28,6 +28,7 @@ publishing {
 
     repositories {
         maven {
+            name 'nitome'
             url 'https://nitome-582563417085.d.codeartifact.eu-north-1.amazonaws.com/maven/nitome/'
             credentials {
                 username "aws"
