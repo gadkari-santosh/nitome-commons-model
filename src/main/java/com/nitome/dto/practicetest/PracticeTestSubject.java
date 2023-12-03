@@ -11,22 +11,17 @@
  * limitations under the License.
  */
 
-package com.nitome.dto.academics;
+package com.nitome.dto.practicetest;
 
-import com.nitome.dto.questions.QuestionSetInfo;
-import lombok.Getter;
-import lombok.Setter;
+import com.nitome.dto.enums.SubjectCode;
+import lombok.Data;
 
 import java.util.List;
 
-@Getter
-@Setter
-public class Topic {
+@Data
+public class PracticeTestSubject {
 
-    private String id;
-    private String name;
+    private SubjectCode name;
 
-    private List<LectureRef> lectures;
-
-    private List<QuestionSetInfo> questionSets;
+    private List<PracticeTestChapter> chapters;
 }

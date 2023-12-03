@@ -1,6 +1,6 @@
-package com.nitome.dto.mocks;
+package com.nitome.dto.mocks.req;
 
-import lombok.Data;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -8,10 +8,7 @@ import java.time.LocalTime;
 
 @Getter
 @Setter
-@Data
-public class MockExamBookingSlot {
-
-    private Long id;
+public class MockBookingSlotCreateReq {
 
     private Integer totalCapacity;
 
@@ -23,14 +20,14 @@ public class MockExamBookingSlot {
 
     private String cancellationReason;
 
+    @JsonFormat(shape=JsonFormat.Shape.STRING, pattern="HH:mm:ss")
     private LocalTime startTime;
 
+    @JsonFormat(shape=JsonFormat.Shape.STRING, pattern="HH:mm:ss")
     private LocalTime reportingTime;
 
+    @JsonFormat(shape=JsonFormat.Shape.STRING, pattern="HH:mm:ss")
     private LocalTime endTime;
 
-    private ExamCentre examCentre;
-
-    private Double price;
-
+    private String createdBy;
 }

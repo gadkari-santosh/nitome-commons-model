@@ -14,7 +14,7 @@
 package com.nitome.dto.academics;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.nitome.dto.QuestionSet;
+import com.nitome.dto.questions.QuestionSet;
 import lombok.Getter;
 import lombok.Setter;
 

@@ -11,22 +11,18 @@
  * limitations under the License.
  */
 
-package com.nitome.dto.academics;
+package com.nitome.dto.questions;
 
-import com.nitome.dto.questions.QuestionSetInfo;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
-import java.util.List;
+@Data
+public class Option {
 
-@Getter
-@Setter
-public class Topic {
+    private String image;
 
-    private String id;
-    private String name;
+    private String value;
 
-    private List<LectureRef> lectures;
+    private String audio;
 
-    private List<QuestionSetInfo> questionSets;
+    private Boolean correct;
 }

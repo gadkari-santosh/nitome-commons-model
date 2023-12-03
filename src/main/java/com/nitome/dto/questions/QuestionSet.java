@@ -11,9 +11,9 @@
  * limitations under the License.
  */
 
-package com.nitome.dto.academics;
+package com.nitome.dto.questions;
 
-import com.nitome.dto.questions.QuestionSetInfo;
+import com.nitome.dto.enums.GradeCode;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -21,12 +21,25 @@ import java.util.List;
 
 @Getter
 @Setter
-public class Topic {
+public class QuestionSet {
 
     private String id;
+
+    private String questionSetId;
+
     private String name;
 
-    private List<LectureRef> lectures;
+    private String description;
 
-    private List<QuestionSetInfo> questionSets;
+    private GradeCode grade;
+
+    private Float negativeMark;
+
+    private Float marksPerQuestion;
+
+    private Float totalMarks;
+
+    private Float totalTime; // -1 for unlimited time.
+
+    private List<Question> questions;
 }

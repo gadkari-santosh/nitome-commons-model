@@ -11,9 +11,8 @@
  * limitations under the License.
  */
 
-package com.nitome.dto.academics;
+package com.nitome.dto.questions;
 
-import com.nitome.dto.questions.QuestionSetInfo;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -21,12 +20,14 @@ import java.util.List;
 
 @Getter
 @Setter
-public class Topic {
+public class UserAnswer {
 
-    private String id;
-    private String name;
+    private String questionId;
+    private List<String> answerValues;
+    private String imageValue = "";
 
-    private List<LectureRef> lectures;
+    private Boolean guess = Boolean.FALSE;
+    private Boolean skipped = Boolean.FALSE;
 
-    private List<QuestionSetInfo> questionSets;
+    private long timeTakenInMs;
 }

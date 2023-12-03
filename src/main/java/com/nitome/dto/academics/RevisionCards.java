@@ -13,20 +13,20 @@
 
 package com.nitome.dto.academics;
 
-import com.nitome.dto.questions.QuestionSetInfo;
-import lombok.Getter;
-import lombok.Setter;
+import com.nitome.dto.enums.GradeCode;
+import com.nitome.dto.enums.SubjectCode;
+import lombok.Data;
 
 import java.util.List;
 
-@Getter
-@Setter
-public class Topic {
+@Data
+public class RevisionCards {
 
-    private String id;
-    private String name;
+    private String title;
 
-    private List<LectureRef> lectures;
+    private SubjectCode subject;
 
-    private List<QuestionSetInfo> questionSets;
+    private GradeCode grade;
+
+    private List<String> cardImages;
 }

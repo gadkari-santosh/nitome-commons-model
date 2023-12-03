@@ -10,4 +10,8 @@ public class Price {
     private String currency;
 
     private Double value;
+
+    private String currencySymbol;
+
+    private String priceString;
 }
