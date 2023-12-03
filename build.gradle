@@ -33,8 +33,6 @@ publishing {
             credentials {
                 username "aws"
                 password codeartifactToken
-                //password System.getenv("AWS_TOKEN")
-                //System.env.CODEARTIFACT_AUTH_TOKEN
             }
         }
     }
