@@ -23,16 +23,13 @@ publishing {
             from components.java
         }
     }
-
-    def codeartifactToken = "aws codeartifact get-authorization-token --domain nitome --domain-owner 582563417085 --region eu-north-1 --query authorizationToken --output text".execute().text
-
     repositories {
         maven {
-            name 'nitome'
             url 'https://nitome-582563417085.d.codeartifact.eu-north-1.amazonaws.com/maven/nitome/'
             credentials {
                 username "aws"
-                password codeartifactToken
+                password System.getenv("AWS_TOKEN")
+                //System.env.CODEARTIFACT_AUTH_TOKEN
             }
         }
     }
