@@ -44,16 +44,12 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: eu-north-1
     - run: echo "CODEARTIFACT_AUTH_TOKEN=$(aws codeartifact get-authorization-token --domain nitome --domain-owner 582563417085 --region eu-north-1 --query authorizationToken --output text)" >> $GITHUB_ENV
-    - name: Test1
-      run: echo $CODEARTIFACT_AUTH_TOKEN
     # The USERNAME and TOKEN need to correspond to the credentials environment variables used in
     # the publishing section of your build.gradle
     - name: Publish to GitHub Packages
       uses: gradle/gradle-build-action@bd5760595778326ba7f1441bcf7e88b49de61a25 # v2.6.0
       with:
         arguments: publish
-    - name: Test2
-      run: echo $CODEARTIFACT_AUTH_TOKEN
       env:
         USERNAME: ${{ github.actor }}
         AWS_TOKEN: $CODEARTIFACT_AUTH_TOKEN
