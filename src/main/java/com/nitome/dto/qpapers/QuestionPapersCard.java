@@ -15,12 +15,11 @@ package com.nitome.dto.qpapers;
 
 import com.nitome.dto.enums.GradeCode;
 import com.nitome.dto.enums.Offering;
+import java.math.BigDecimal;
+import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.math.BigDecimal;
-import java.util.List;
 
 @Data
 @AllArgsConstructor

@@ -7,11 +7,10 @@
 package com.nitome.dto.questions;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import lombok.Getter;
-import lombok.Setter;
-
 import java.time.LocalDateTime;
 import java.util.List;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * @Santosh Gadkari
@@ -28,7 +27,7 @@ public class QuestionSetResult {
 
     private ResultAnalysis resultAnalysis;
 
-    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime resultTime;
 
     private List<Result> result;

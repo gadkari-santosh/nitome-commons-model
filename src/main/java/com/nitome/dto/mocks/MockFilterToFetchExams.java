@@ -16,16 +16,13 @@ package com.nitome.dto.mocks;
 import com.nitome.dto.enums.GradeCode;
 import com.nitome.dto.enums.MockExamMode;
 import com.nitome.dto.enums.SubjectCode;
-import lombok.Data;
-
-import java.io.Serializable;
-import java.time.LocalDate;
 import java.util.List;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 @Data
-public class MockExamBookingAvailabilityFilterCriteria implements Serializable {
-
-    private List<String> examNames;
+@EqualsAndHashCode
+public class MockFilterToFetchExams {
 
     private List<SubjectCode> subjectNames;
 
@@ -33,15 +30,7 @@ public class MockExamBookingAvailabilityFilterCriteria implements Serializable {
 
     private GradeCode grade;
 
-    private List<String> authors;
-
-    private List<Long> authorIds;
-
-    private List<MockExamMode> registrationModes;
-
-    private LocalDate fromDate;
-
-    private LocalDate toDate;
+    private List<MockExamMode> examTypes;
 
     private String city;
 

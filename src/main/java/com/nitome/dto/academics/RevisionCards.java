@@ -15,9 +15,8 @@ package com.nitome.dto.academics;
 
 import com.nitome.dto.enums.GradeCode;
 import com.nitome.dto.enums.SubjectCode;
-import lombok.Data;
-
 import java.util.List;
+import lombok.Data;
 
 @Data
 public class RevisionCards {

@@ -14,10 +14,9 @@
 package com.nitome.dto.practicetest;
 
 import com.nitome.dto.enums.GradeCode;
-import lombok.Data;
-
 import java.util.ArrayList;
 import java.util.List;
+import lombok.Data;
 
 @Data
 public class PracticeTestBooklet {

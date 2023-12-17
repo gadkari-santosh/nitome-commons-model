@@ -14,10 +14,9 @@
 package com.nitome.dto.academics;
 
 import com.nitome.dto.questions.QuestionSetInfo;
+import java.util.List;
 import lombok.Getter;
 import lombok.Setter;
-
-import java.util.List;
 
 @Getter
 @Setter

@@ -1,5 +1,8 @@
 package com.nitome.dto.mocks;
 
+import lombok.Data;
+
+@Data
 public class ExamCentre {
 
     private String name;

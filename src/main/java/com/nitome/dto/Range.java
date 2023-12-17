@@ -13,14 +13,38 @@
 
 package com.nitome.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonPOJOBuilder;
+import lombok.*;
 
-@AllArgsConstructor
-@Data
+import java.util.Objects;
+
+@Value
+@Builder(setterPrefix = "with")
+@JsonPOJOBuilder(withPrefix = "")
+@JsonDeserialize(builder = Range.RangeBuilder.class)
 public class Range<T> {
 
     T from;
 
     T to;
+
+    @JsonProperty("displayString")
+    public String displayString() {
+
+        if (Objects.nonNull(to) && Objects.isNull(from)) {
+            return String.format("upto %s", to.toString());
+        } else if (Objects.isNull(to) && Objects.nonNull(from)) {
+            return String.format("> %s", from.toString());
+        } else if (Objects.nonNull(to)) {
+            return String.format("%s - %s", from.toString(), to.toString());
+        } else {
+            throw new IllegalArgumentException("Undefined Range. Either to or from is mandatory.");
+        }
+    }
+
+    public String toString() {
+        return displayString();
+    }
 }

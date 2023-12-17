@@ -13,35 +13,27 @@
 
 package com.nitome.dto.mocks;
 
+import com.nitome.dto.Price;
+import com.nitome.dto.Range;
 import com.nitome.dto.enums.GradeCode;
 import com.nitome.dto.enums.MockExamMode;
-import com.nitome.dto.enums.SubjectCode;
-import lombok.Getter;
-import lombok.Setter;
-
-import java.io.Serializable;
 import java.time.LocalDate;
-import java.util.List;
+import lombok.Data;
 
-@Getter
-@Setter
-public class MockExamBookingFilterCriteria implements Serializable {
+@Data
+public class MockExamFilterCriteria {
 
-    private List<String> examNames;
+    private MockExamMode examMode;
 
-    private List<SubjectCode> subjectNames;
-
-    private List<Long> examIds;
+    private Long examId;
 
     private GradeCode grade;
 
-    private List<String> authors;
+    private Long authorId;
 
-    private List<Long> authorIds;
+    private LocalDate examDateFrom;
 
-    private List<MockExamMode> registrationModes;
-
-    private LocalDate examDate;
+    private Range<Price> priceRange;
 
     private String city;
 

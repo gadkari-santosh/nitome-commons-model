@@ -14,9 +14,8 @@
 package com.nitome.dto.practicetest;
 
 import com.nitome.dto.enums.SubjectCode;
-import lombok.Data;
-
 import java.util.List;
+import lombok.Data;
 
 @Data
 public class PracticeTestSubject {

@@ -1,12 +1,10 @@
 package com.nitome.dto;
 
-
 import com.fasterxml.jackson.annotation.JsonInclude;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 @Data
 @EqualsAndHashCode
@@ -16,6 +14,7 @@ public class Author implements Serializable {
     private static final long serialVersionUID = 1L;
 
     public Author() {}
+
     public Author(Long id, String name) {
         this.id = id;
         this.name = name;
@@ -38,5 +37,4 @@ public class Author implements Serializable {
     private LocalDateTime createdOn;
 
     private String createdBy;
-
 }

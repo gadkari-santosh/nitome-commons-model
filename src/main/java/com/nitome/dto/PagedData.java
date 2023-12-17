@@ -13,13 +13,16 @@
 
 package com.nitome.dto;
 
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonPOJOBuilder;
+import java.util.List;
 import lombok.Builder;
 import lombok.Value;
 
-import java.util.List;
-
 @Value
-@Builder
+@Builder(setterPrefix = "with")
+@JsonPOJOBuilder(withPrefix = "")
+@JsonDeserialize(builder = PagedData.PagedDataBuilder.class)
 public class PagedData<T> {
 
     long totalElements;

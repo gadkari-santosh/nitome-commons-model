@@ -21,5 +21,4 @@ public class DeleteProfileReq {
     private Long profileId;
 
     private String username;
-
 }

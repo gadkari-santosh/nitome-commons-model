@@ -21,6 +21,4 @@ import lombok.Setter;
 @Setter
 @Getter
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class AcademicsQuestionSet extends QuestionSet {
-
-}
+public class AcademicsQuestionSet extends QuestionSet {}

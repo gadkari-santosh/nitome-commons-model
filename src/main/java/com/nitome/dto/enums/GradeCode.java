@@ -1,7 +1,6 @@
 package com.nitome.dto.enums;
 
 public enum GradeCode {
-
     R("Reception"),
     G_1("Grade 1"),
     G_2("Grade 2"),

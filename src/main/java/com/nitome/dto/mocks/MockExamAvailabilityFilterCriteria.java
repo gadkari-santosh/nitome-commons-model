@@ -11,16 +11,31 @@
  * limitations under the License.
  */
 
-package com.nitome.dto.practicetest;
+package com.nitome.dto.mocks;
 
-import java.util.List;
+import com.nitome.dto.Price;
+import com.nitome.dto.Range;
+import com.nitome.dto.enums.GradeCode;
+import com.nitome.dto.enums.MockExamMode;
+import java.time.LocalDate;
 import lombok.Data;
 
 @Data
-public class PracticeTestChapter {
+public class MockExamAvailabilityFilterCriteria {
 
-    private Integer order;
-    private String name;
+    private MockExamMode examMode;
 
-    private List<PracticeTest> tests;
+    private Long examId;
+
+    private GradeCode grade;
+
+    private Long authorId;
+
+    private Range<Price> priceRange;
+
+    private String city;
+
+    private LocalDate fromDate;
+
+    private LocalDate toDate;
 }

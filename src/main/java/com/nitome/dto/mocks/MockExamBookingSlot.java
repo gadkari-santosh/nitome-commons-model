@@ -1,10 +1,9 @@
 package com.nitome.dto.mocks;
 
+import java.time.LocalTime;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
-
-import java.time.LocalTime;
 
 @Getter
 @Setter
@@ -32,5 +31,4 @@ public class MockExamBookingSlot {
     private ExamCentre examCentre;
 
     private Double price;
-
 }

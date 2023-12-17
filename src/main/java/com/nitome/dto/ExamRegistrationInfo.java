@@ -15,12 +15,11 @@ package com.nitome.dto;
 
 import com.nitome.dto.enums.ExamRegistrationMode;
 import com.nitome.dto.enums.GradeCode;
+import java.time.LocalDate;
+import java.time.LocalTime;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
-
-import java.time.LocalDate;
-import java.time.LocalTime;
 
 @Getter
 @Setter

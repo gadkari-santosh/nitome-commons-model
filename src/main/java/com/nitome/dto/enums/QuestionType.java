@@ -14,7 +14,6 @@
 package com.nitome.dto.enums;
 
 public enum QuestionType {
-
     MANUAL_TYPED_ANSWER,
     SINGLE_SELECT,
     MULTI_SELECT,

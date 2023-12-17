@@ -15,13 +15,12 @@ package com.nitome.dto.mocks;
 
 import com.nitome.dto.enums.GradeCode;
 import com.nitome.dto.enums.MockExamMode;
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
-
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.List;
+import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 @Getter
 @Setter

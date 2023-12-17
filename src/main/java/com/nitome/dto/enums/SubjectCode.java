@@ -8,7 +8,7 @@ public enum SubjectCode {
     COMPUTER("Computer"),
     GK("General Knowledge"),
     SOCIAL_SCIENCE("Social Science"),
-    SCIENCE( "Science"),
+    SCIENCE("Science"),
     REASONING("Reasoning"),
     NVR("Non Verbal Reasoning");
 

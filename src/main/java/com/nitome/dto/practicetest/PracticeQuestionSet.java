@@ -9,5 +9,4 @@ import lombok.Setter;
 public class PracticeQuestionSet extends QuestionSet {
 
     private Long practiceTestId;
-
 }

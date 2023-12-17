@@ -13,24 +13,21 @@
 
 package com.nitome.dto.mocks;
 
-import lombok.Data;
-
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonPOJOBuilder;
 import java.time.LocalDate;
+import lombok.Builder;
+import lombok.Value;
 
-@Data
+@Value
+@Builder(setterPrefix = "with")
+@JsonPOJOBuilder(withPrefix = "")
+@JsonDeserialize(builder = MockExamAvailability.MockExamAvailabilityBuilder.class)
 public class MockExamAvailability implements Comparable<MockExamAvailability> {
 
-    LocalDate date;
+    private LocalDate date;
 
-    Long totalSlots = 0l;
-
-    public MockExamAvailability(LocalDate date){
-        this.date = date;
-    }
-
-    public void addToTotalSlots(long slots) {
-        totalSlots = totalSlots + slots;
-    }
+    private long totalSlots;
 
     @Override
     public int compareTo(MockExamAvailability mockExamAvailability) {

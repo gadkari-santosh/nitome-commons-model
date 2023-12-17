@@ -1,11 +1,10 @@
 package com.nitome.dto.mocks;
 
 import com.nitome.dto.Student;
+import java.util.List;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
-
-import java.util.List;
 
 @Setter
 @Getter

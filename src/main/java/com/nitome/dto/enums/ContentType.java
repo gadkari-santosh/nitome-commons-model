@@ -14,7 +14,6 @@
 package com.nitome.dto.enums;
 
 public enum ContentType {
-
     PDF_FILE,
     TEXT_FILE,
     HTML_URL,

@@ -14,9 +14,8 @@
 package com.nitome.dto.profile.req;
 
 import com.nitome.dto.profile.User;
-import lombok.Data;
-
 import java.util.List;
+import lombok.Data;
 
 @Data
 public class CreateProfileReq {

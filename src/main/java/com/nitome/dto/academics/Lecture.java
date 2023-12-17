@@ -29,5 +29,4 @@ public class Lecture {
 
     private ContentType contentType; // file or html
     private String data; // if file then its file url or text.
-
 }

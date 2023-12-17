@@ -14,10 +14,9 @@
 package com.nitome.dto.questions;
 
 import com.nitome.dto.enums.QuestionType;
-import lombok.Data;
-
 import java.util.List;
 import java.util.Map;
+import lombok.Data;
 
 @Data
 public class Question {

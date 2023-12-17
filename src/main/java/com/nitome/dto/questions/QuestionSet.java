@@ -14,10 +14,9 @@
 package com.nitome.dto.questions;
 
 import com.nitome.dto.enums.GradeCode;
+import java.util.List;
 import lombok.Getter;
 import lombok.Setter;
-
-import java.util.List;
 
 @Getter
 @Setter

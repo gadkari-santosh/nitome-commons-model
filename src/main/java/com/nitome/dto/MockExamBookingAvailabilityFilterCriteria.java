@@ -16,11 +16,10 @@ package com.nitome.dto;
 import com.nitome.dto.enums.GradeCode;
 import com.nitome.dto.enums.MockExamMode;
 import com.nitome.dto.enums.SubjectCode;
-import lombok.Data;
-
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.List;
+import lombok.Data;
 
 @Data
 public class MockExamBookingAvailabilityFilterCriteria implements Serializable {

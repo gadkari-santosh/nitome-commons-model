@@ -10,7 +10,7 @@ public class Testimony {
     /*
     Description of testimony
      */
-    String testimony;
+    String description;
 
     /*
      * Full name of the person.

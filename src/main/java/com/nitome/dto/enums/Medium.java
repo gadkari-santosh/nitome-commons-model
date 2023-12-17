@@ -17,5 +17,4 @@ public enum Medium {
     ENGLISH,
     HINDI,
     MARATHI;
-
 }
