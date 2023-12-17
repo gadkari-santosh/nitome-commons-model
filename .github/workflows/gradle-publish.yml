@@ -40,6 +40,10 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: eu-north-1
     - run: CODEARTIFACT_AUTH_TOKEN=$(aws codeartifact get-authorization-token --domain nitome --domain-owner 582563417085 --region eu-north-1 --query authorizationToken --output text)
+    - name: Test1
+      run: echo $CODEARTIFACT_AUTH_TOKEN
+    - name: Test2
+      run: echo ${{CODEARTIFACT_AUTH_TOKEN}}
     - name: Build with Gradle
       uses: gradle/gradle-build-action@bd5760595778326ba7f1441bcf7e88b49de61a25 # v2.6.0
       with:
@@ -53,8 +57,9 @@ jobs:
       uses: gradle/gradle-build-action@bd5760595778326ba7f1441bcf7e88b49de61a25 # v2.6.0
       with:
         arguments: publish
+
       env:
         USERNAME: ${{ github.actor }}
         AWS_TOKEN: ${{ secrets.AWS_TOKEN }}
-        AWS_CODEARTIFACT_TOKEN: $CODEARTIFACT_AUTH_TOKEN
+        AWS_CODEARTIFACT_TOKEN: ${{CODEARTIFACT_AUTH_TOKEN}}
         GIT_RUN_NUM : .${{ github.run_number }}
