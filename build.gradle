@@ -31,7 +31,6 @@ publishing {
         }
     }
     repositories {
-        echo $CODEARTIFACT_AUTH_TOKEN
         maven {
             name = "aws"
             url 'https://nitome-582563417085.d.codeartifact.eu-north-1.amazonaws.com/maven/nitome/'
