@@ -35,8 +35,9 @@ publishing {
             name = "nitome"
             url 'https://nitome-582563417085.d.codeartifact.eu-north-1.amazonaws.com/maven/nitome/'
             credentials {
-                username "nitome-maven-user"
+                username "aws"
                 password System.getenv("AWS_TOKEN")
+//                password System.env.AWS_TOKEN
             }
         }
 

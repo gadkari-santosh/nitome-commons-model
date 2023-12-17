@@ -43,7 +43,9 @@ jobs:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: eu-north-1
-    - run: echo "CODEARTIFACT_AUTH_TOKEN=$(aws codeartifact get-authorization-token --domain nitome --domain-owner 582563417085 --region eu-north-1 --query authorizationToken --output text)" >> $GITHUB_ENV
+    - name: Create token
+      id: aws-codeartifact-token
+      run: echo "CODEARTIFACT_AUTH_TOKEN=$(aws codeartifact get-authorization-token --domain nitome --domain-owner 582563417085 --region eu-north-1 --query authorizationToken --output text)" >> "$GITHUB_OUTPUT"
     # The USERNAME and TOKEN need to correspond to the credentials environment variables used in
     # the publishing section of your build.gradle
     - name: Publish to GitHub Packages
@@ -52,5 +54,5 @@ jobs:
         arguments: publishMavenJavaPublicationToNitomeRepository
       env:
         USERNAME: ${{ github.actor }}
-        AWS_TOKEN: $CODEARTIFACT_AUTH_TOKEN
+        AWS_TOKEN: ${{steps.aws-codeartifact-token.outputs.CODEARTIFACT_AUTH_TOKEN}}
         GIT_RUN_NUM : .${{ github.run_number }}
