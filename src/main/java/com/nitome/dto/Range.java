@@ -16,9 +16,8 @@ package com.nitome.dto;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonPOJOBuilder;
-import lombok.*;
-
 import java.util.Objects;
+import lombok.*;
 
 @Value
 @Builder(setterPrefix = "with")
