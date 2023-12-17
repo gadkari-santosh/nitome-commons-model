@@ -33,6 +33,10 @@ jobs:
         distribution: 'temurin'
         server-id: github # Value of the distributionManagement/repository/id field of the pom.xml
         settings-path: ${{ github.workspace }} # location for the settings.xml file
+    - name: Build with Gradle
+      uses: gradle/gradle-build-action@bd5760595778326ba7f1441bcf7e88b49de61a25 # v2.6.0
+      with:
+        arguments: build
     - uses: aws-actions/setup-sam@v1
     - uses: aws-actions/configure-aws-credentials@v1
       with:
@@ -42,22 +46,15 @@ jobs:
     - run: echo "CODEARTIFACT_AUTH_TOKEN=$(aws codeartifact get-authorization-token --domain nitome --domain-owner 582563417085 --region eu-north-1 --query authorizationToken --output text)" >> $GITHUB_ENV
     - name: Test1
       run: echo $CODEARTIFACT_AUTH_TOKEN
-    - name: Build with Gradle
-      uses: gradle/gradle-build-action@bd5760595778326ba7f1441bcf7e88b49de61a25 # v2.6.0
-      with:
-        arguments: build
-      env:
-        AWS_CODEARTIFACT_TOKEN: $CODEARTIFACT_AUTH_TOKEN
-
     # The USERNAME and TOKEN need to correspond to the credentials environment variables used in
     # the publishing section of your build.gradle
     - name: Publish to GitHub Packages
       uses: gradle/gradle-build-action@bd5760595778326ba7f1441bcf7e88b49de61a25 # v2.6.0
       with:
         arguments: publish
-
+    - name: Test2
+      run: echo $CODEARTIFACT_AUTH_TOKEN
       env:
         USERNAME: ${{ github.actor }}
-        AWS_TOKEN: ${{ secrets.AWS_TOKEN }}
-        AWS_CODEARTIFACT_TOKEN: $CODEARTIFACT_AUTH_TOKEN
+        AWS_TOKEN: $CODEARTIFACT_AUTH_TOKEN
         GIT_RUN_NUM : .${{ github.run_number }}
