@@ -39,7 +39,7 @@ jobs:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: eu-north-1
-    - run: CODEARTIFACT_AUTH_TOKEN=$(aws codeartifact get-authorization-token --domain nitome --domain-owner 582563417085 --region eu-north-1 --query authorizationToken --output text) >> $CODEARTIFACT_AUTH_TOKEN
+    - run: export CODEARTIFACT_AUTH_TOKEN=`aws codeartifact get-authorization-token --domain nitome --domain-owner 582563417085 --region eu-north-1 --query authorizationToken --output text`
     - name: Build with Gradle
       uses: gradle/gradle-build-action@bd5760595778326ba7f1441bcf7e88b49de61a25 # v2.6.0
       with:
