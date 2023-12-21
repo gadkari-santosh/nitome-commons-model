@@ -13,8 +13,6 @@
 
 package com.nitome.dto.mocks;
 
-import com.nitome.dto.Price;
-import com.nitome.dto.Range;
 import com.nitome.dto.enums.GradeCode;
 import com.nitome.dto.enums.MockExamMode;
 import java.time.LocalDate;
@@ -30,8 +28,6 @@ public class MockExamAvailabilityFilterCriteria {
     private GradeCode grade;
 
     private Long authorId;
-
-    private Range<Price> priceRange;
 
     private String city;
 

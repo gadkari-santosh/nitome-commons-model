@@ -13,17 +13,13 @@
 
 package com.nitome.dto.mocks;
 
+import com.nitome.dto.Price;
 import com.nitome.dto.enums.GradeCode;
 import com.nitome.dto.enums.MockExamMode;
 import java.time.LocalDate;
-import java.time.LocalTime;
 import java.util.List;
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
 
-@Getter
-@Setter
 @Data
 public class MockExamCard {
 
@@ -33,19 +29,27 @@ public class MockExamCard {
 
     private String examName;
 
-    private LocalDate examDate;
-
-    private LocalTime examTime;
-
     private MockExamMode examMode;
 
     private String shortAddr;
+
+    private String fullAddr;
+
+    private String city;
+
+    private String contactPhone;
+
+    private String contactName;
 
     private GradeCode grade;
 
     private String imageName;
 
-    private Long durationInMinutes;
+    private Long examDuration;
+
+    private LocalDate examDate;
+
+    private Price price;
 
     private List<MockExamBookingSlot> bookingSlots;
 }
