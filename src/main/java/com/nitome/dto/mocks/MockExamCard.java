@@ -13,6 +13,8 @@
 
 package com.nitome.dto.mocks;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.nitome.dto.DateFormat;
 import com.nitome.dto.Price;
 import com.nitome.dto.enums.GradeCode;
 import com.nitome.dto.enums.MockExamMode;
@@ -47,6 +49,7 @@ public class MockExamCard {
 
     private Long examDuration;
 
+    @JsonFormat(pattern = DateFormat.DEFAULT_DATE_FORMAT)
     private LocalDate examDate;
 
     private Price price;

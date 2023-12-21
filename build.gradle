@@ -95,13 +95,13 @@ spotless {
     }
 }
 
-allprojects {
-    afterEvaluate {
-        def spotless = tasks.findByName('spotlessJavaCheck')
-        if (spotless) {
-            tasks.withType(JavaCompile) {
-                finalizedBy(spotless)
-            }
-        }
-    }
-}
+//allprojects {
+//    afterEvaluate {
+//        def spotless = tasks.findByName('spotlessJavaCheck')
+//        if (spotless) {
+//            tasks.withType(JavaCompile) {
+//                finalizedBy(spotless)
+//            }
+//        }
+//    }
+//}

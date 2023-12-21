@@ -1,5 +1,7 @@
 package com.nitome.dto.mocks;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.nitome.dto.DateFormat;
 import java.time.LocalTime;
 import lombok.Data;
 
@@ -18,9 +20,12 @@ public class MockExamBookingSlot {
 
     private String cancellationReason;
 
+    @JsonFormat(pattern = DateFormat.DEFAULT_TIME_NO_SEC_FORMAT)
     private LocalTime startTime;
 
+    @JsonFormat(pattern = DateFormat.DEFAULT_TIME_NO_SEC_FORMAT)
     private LocalTime reportingTime;
 
+    @JsonFormat(pattern = DateFormat.DEFAULT_TIME_NO_SEC_FORMAT)
     private LocalTime endTime;
 }

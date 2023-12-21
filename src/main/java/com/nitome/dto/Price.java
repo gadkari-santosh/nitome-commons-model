@@ -20,9 +20,12 @@ public class Price implements Serializable {
     @JsonProperty("currencyString")
     public String currencyString() {
 
-        var curr = Currency.getInstance(currency);
+        if (currency != null) {
+            var curr = Currency.getInstance(currency);
 
-        return String.format("%s%.0f", curr.getSymbol(), value);
+            return String.format("%s%.0f", curr.getSymbol(), value);
+        }
+        return "";
     }
 
     public String toString() {
