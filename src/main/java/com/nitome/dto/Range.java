@@ -39,7 +39,7 @@ public class Range<T> {
         } else if (Objects.nonNull(to)) {
             return String.format("%s - %s", from.toString(), to.toString());
         } else {
-            throw new IllegalArgumentException("Undefined Range. Either to or from is mandatory.");
+            return "(null)min - (null)max";
         }
     }
 
