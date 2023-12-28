@@ -11,19 +11,18 @@
  * limitations under the License.
  */
 
-package com.nitome.dto.questions;
+package com.nitome.dto.reviews;
 
-import java.util.List;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
-@Getter
-@Setter
-public class Result {
+@Data
+public class FilterReviewsReq {
 
-    private String questionId;
-    private List<String> userAnswers;
-    private List<String> correctAnswers;
+    private Long refId;
 
-    private Boolean correct;
+    private ReviewTag tag;
+
+    private Integer pageNo = 0;
+
+    private Integer pageSize = Integer.MAX_VALUE;
 }

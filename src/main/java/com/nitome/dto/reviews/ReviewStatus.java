@@ -11,19 +11,11 @@
  * limitations under the License.
  */
 
-package com.nitome.dto.questions;
+package com.nitome.dto.reviews;
 
-import java.util.List;
-import lombok.Getter;
-import lombok.Setter;
-
-@Getter
-@Setter
-public class Result {
-
-    private String questionId;
-    private List<String> userAnswers;
-    private List<String> correctAnswers;
-
-    private Boolean correct;
+public enum ReviewStatus {
+    CREATED,
+    APPROVED,
+    REJECTED,
+    UPDATED;
 }

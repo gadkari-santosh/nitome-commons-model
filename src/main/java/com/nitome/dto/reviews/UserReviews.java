@@ -11,34 +11,28 @@
  * limitations under the License.
  */
 
-package com.nitome.dto.qpapers;
+package com.nitome.dto.reviews;
 
-import com.nitome.dto.enums.GradeCode;
-import com.nitome.dto.enums.Offering;
-import java.math.BigDecimal;
-import java.util.List;
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
+
+import java.time.LocalDateTime;
 
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
-public class QuestionPapersCard {
+public class UserReviews {
 
     private Long id;
+    private Long refId;
 
-    private String authorName;
+    private Integer rating;
 
-    private String image;
+    private Long userId;
+    private String userName;
 
-    private String description;
+    private String headline;
+    private String review;
 
-    private String subject;
+    private ReviewTag tag;
 
-    private List<GradeCode> grades;
-
-    private BigDecimal avgRating;
-
-    private Offering offering;
+    private LocalDateTime updatedOn;
+    private LocalDateTime createdOn;
 }

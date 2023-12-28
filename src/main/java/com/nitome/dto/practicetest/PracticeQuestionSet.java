@@ -1,11 +1,9 @@
 package com.nitome.dto.practicetest;
 
 import com.nitome.dto.questions.QuestionSet;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
-@Setter
-@Getter
+@Data
 public class PracticeQuestionSet extends QuestionSet {
 
     private Long practiceTestId;

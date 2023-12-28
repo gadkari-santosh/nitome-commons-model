@@ -11,19 +11,16 @@
  * limitations under the License.
  */
 
-package com.nitome.dto.questions;
+package com.nitome.dto.reviews;
 
-import java.util.List;
-import lombok.Getter;
-import lombok.Setter;
+import com.nitome.dto.ResponseStatus;
+import lombok.Data;
 
-@Getter
-@Setter
-public class Result {
+@Data
+public class CrudResponse<T> {
 
-    private String questionId;
-    private List<String> userAnswers;
-    private List<String> correctAnswers;
+    private ResponseStatus status;
+    private Long id;
 
-    private Boolean correct;
+    private T value;
 }

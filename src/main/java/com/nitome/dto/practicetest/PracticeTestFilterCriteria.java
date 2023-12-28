@@ -12,11 +12,11 @@ import lombok.Setter;
 @Setter
 public class PracticeTestFilterCriteria implements Serializable {
 
+    private GradeCode grade;
+
     private List<SubjectCode> subjects;
 
     private List<Long> examIds;
-
-    private GradeCode grade;
 
     private List<Long> authorIds;
 

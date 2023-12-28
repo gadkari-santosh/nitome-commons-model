@@ -11,36 +11,27 @@
  * limitations under the License.
  */
 
-package com.nitome.dto.practicetest;
+package com.nitome.dto.reviews;
 
-import com.nitome.dto.enums.GradeCode;
-import com.nitome.dto.enums.Offering;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.Data;
 
-@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
-public class PracticeTestBookletCard {
+import java.time.LocalDateTime;
+
+@Data
+public class ReviewSummery {
 
     private Long id;
+    private Long refId;
 
-    private String authorName;
-
-    private String image;
-
-    private String name;
-
-    private String subjects;
-
-    private GradeCode grade;
-
-    private Double avgRating;
+    private ReviewTag tag;
+    private Float avgRating;
 
     private Long totalReviews;
+    private Long totalR1;
+    private Long totalR2;
+    private Long totalR3;
+    private Long totalR4;
+    private Long totalR5;
 
-    private Offering offering;
+    private LocalDateTime updatedOn;
 }

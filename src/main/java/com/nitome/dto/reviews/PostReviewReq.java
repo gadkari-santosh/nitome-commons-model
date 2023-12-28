@@ -11,19 +11,22 @@
  * limitations under the License.
  */
 
-package com.nitome.dto.questions;
+package com.nitome.dto.reviews;
 
-import java.util.List;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
-@Getter
-@Setter
-public class Result {
+@Data
+public class PostReviewReq {
 
-    private String questionId;
-    private List<String> userAnswers;
-    private List<String> correctAnswers;
+    // user info
+    private Long userId;
+    private String userName;
 
-    private Boolean correct;
+    // actual review
+    private String headline;
+    private String review;
+    private Integer rating; // should be between 1-5
+
+    private Long refId;
+    private ReviewTag tag;
 }

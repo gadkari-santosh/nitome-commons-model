@@ -21,8 +21,6 @@ public class QuestionSetResult {
 
     private String questionSetId;
 
-    private Long boardId;
-
     private String userId;
 
     private ResultAnalysis resultAnalysis;

@@ -11,36 +11,42 @@
  * limitations under the License.
  */
 
-package com.nitome.dto.questions;
+package com.nitome.dto.qpapers;
 
 import com.nitome.dto.enums.GradeCode;
+import com.nitome.dto.practicetest.PracticeTest;
+import java.util.ArrayList;
 import java.util.List;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-@Getter
-@Setter
-public class QuestionSet {
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class QuestionPapersBooklet {
 
     private String id;
 
-    private String questionSetId;
-
-    private Long relativeId;
+    private Long qpapersId;
 
     private String name;
 
     private String description;
 
+    private String image;
+
     private GradeCode grade;
 
-    private Float negativeMark;
+    private Long examId;
 
-    private Float marksPerQuestion;
+    private Long authorId;
 
-    private Float totalMarks;
+    private String authorName;
 
-    private Float totalTime; // -1 for unlimited time.
+    // 20+ exam set
+    // 1000 practice questions etc
+    private List<String> features = new ArrayList<>();
 
-    private List<Question> questions;
+    private List<PracticeTest> exams = new ArrayList<>();
 }
