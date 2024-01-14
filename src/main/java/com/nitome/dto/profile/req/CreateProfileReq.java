@@ -14,11 +14,16 @@
 package com.nitome.dto.profile.req;
 
 import com.nitome.dto.profile.User;
+import java.io.Serializable;
 import java.util.List;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
+@Setter
+@Getter
 @Data
-public class CreateProfileReq {
+public class CreateProfileReq implements Serializable {
 
     private User user;
 

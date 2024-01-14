@@ -16,10 +16,15 @@ package com.nitome.dto.profile;
 import com.nitome.dto.enums.Subscription;
 import com.nitome.dto.enums.UserStatus;
 import com.nitome.dto.enums.UserType;
+import java.io.Serializable;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
+@Setter
+@Getter
 @Data
-public class User {
+public class User implements Serializable {
 
     private Long id;
 

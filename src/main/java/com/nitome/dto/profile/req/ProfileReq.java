@@ -19,10 +19,15 @@ import lombok.Data;
 @Data
 public class ProfileReq {
 
+    // DB id
     private Long id;
 
+    // email
+    private String userName;
+
+    // profile name
     private String name;
-    private String schoolName;
+
     private GradeCode grade;
     private Long boardId;
 }

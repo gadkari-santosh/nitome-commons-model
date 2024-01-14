@@ -11,32 +11,17 @@
  * limitations under the License.
  */
 
-package com.nitome.dto.mocks;
+package com.nitome.dto.profile.req;
 
-import com.nitome.dto.Range;
 import com.nitome.dto.enums.GradeCode;
-import com.nitome.dto.enums.MockExamMode;
-import java.time.LocalDate;
 import lombok.Data;
 
 @Data
-public class MockExamFilterCriteria {
+public class UpdateProfileReq {
 
-    private MockExamMode examMode;
+    private Long profileId;
 
-    private Long examId;
-
+    private String name;
     private GradeCode grade;
-
-    private Long authorId;
-
-    private LocalDate examDate;
-
-    private Range<Double> priceRange;
-
-    private String city;
-
-    private Integer pageNo = 0;
-
-    private Integer pageSize = Integer.MAX_VALUE;
+    private Long boardId;
 }

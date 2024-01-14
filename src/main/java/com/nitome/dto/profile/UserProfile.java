@@ -22,7 +22,6 @@ public class UserProfile {
 
     private Long id;
     private String name;
-    private String schoolName;
     private GradeCode grade;
     private Board board;
 

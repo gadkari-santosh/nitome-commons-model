@@ -33,15 +33,7 @@ public class MockExamCard {
 
     private MockExamMode examMode;
 
-    private String shortAddr;
-
-    private String fullAddr;
-
-    private String city;
-
-    private String contactPhone;
-
-    private String contactName;
+    private ExamCentre examCentre;
 
     private GradeCode grade;
 

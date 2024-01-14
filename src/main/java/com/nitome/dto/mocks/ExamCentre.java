@@ -5,15 +5,25 @@ import lombok.Data;
 @Data
 public class ExamCentre {
 
-    private String name;
+    private String centreName;
 
-    private String fullAddress;
+    private String addrLine1;
 
-    private String shortAddress;
+    private String addrLine2;
+
+    private String pincode;
 
     private String city;
 
-    private String contact;
+    private String state;
 
-    private String adminPersonName;
+    private String contactPhone1;
+
+    private String contactPhone2;
+
+    private String email;
+
+    private String contactName1;
+
+    private String contactName2;
 }
