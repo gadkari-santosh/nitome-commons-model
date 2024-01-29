@@ -13,14 +13,14 @@
 
 package com.nitome.dto.practicetest;
 
-import com.nitome.dto.enums.SubjectCode;
 import java.util.List;
 import lombok.Data;
 
 @Data
 public class PracticeTestSubject {
 
-    private SubjectCode name;
+    private String name;
+    private String code;
 
     private List<PracticeTestChapter> chapters;
 }
