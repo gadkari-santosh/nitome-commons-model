@@ -13,8 +13,6 @@
 
 package com.nitome.dto.practicetest;
 
-import com.nitome.dto.enums.GradeCode;
-import com.nitome.dto.enums.Offering;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -36,11 +34,11 @@ public class PracticeTestBookletCard {
 
     private String subjects;
 
-    private GradeCode grade;
+    private String grade;
 
     private Double avgRating;
 
     private Long totalReviews;
 
-    private Offering offering;
+    private String offering;
 }

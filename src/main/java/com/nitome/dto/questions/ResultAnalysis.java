@@ -7,8 +7,28 @@ import lombok.Setter;
 @Setter
 public class ResultAnalysis {
 
+    private Integer totalQuestions;
+
+    private Integer attemptedQuestions;
+
+    private Integer correctQuestions;
+
+    private Integer wrongQuestions;
+
+    private Integer unattemptedQuestions;
+
+    private Integer guessedQuestions;
+
+    private Float avgAccuracy;
+
+    private Float avgTime;
+
     // questions per hour
     private Integer speed;
+
+    private Integer score;
+
+    private Integer grade;
 
     private Double avgSolvingTime;
 
@@ -17,12 +37,4 @@ public class ResultAnalysis {
     private float minSolvingTime;
 
     private Double percentage;
-
-    private Integer correctAnswers;
-
-    private Integer wrongAnswer;
-
-    private Integer skipped;
-
-    private Integer guessed;
 }

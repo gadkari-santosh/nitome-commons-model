@@ -34,9 +34,9 @@ public class QuestionSet {
 
     private GradeCode grade;
 
-    private Float negativeMark;
+    private Float negativeMark = 0.0f;
 
-    private Float marksPerQuestion;
+    private Float marksPerQuestion = 1.0f;
 
     private Float totalMarks;
 
