@@ -36,6 +36,8 @@ public class PracticeTestBookletCard {
 
     private String grade;
 
+    private String gradeCode;
+
     private Double avgRating;
 
     private Long totalReviews;
