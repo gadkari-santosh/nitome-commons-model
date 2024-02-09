@@ -19,11 +19,13 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class Result {
+public class QuestionAnalysis {
 
     private String questionId;
     private List<String> userAnswers;
     private List<String> correctAnswers;
+
+    private String solution;
 
     private Boolean correct;
 }

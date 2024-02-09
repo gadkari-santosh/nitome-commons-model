@@ -28,5 +28,7 @@ public class QuestionSetResult {
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime resultTime;
 
-    private List<Result> result;
+    private List<QuestionAnalysis> questionAnalyses;
+
+    private List<SectionResult> sectionResult;
 }

@@ -19,22 +19,22 @@ public class ResultAnalysis {
 
     private Integer guessedQuestions;
 
-    private Float avgAccuracy;
+    private Double avgAccuracy;
 
-    private Float avgTime;
+    private Double avgTime;
 
     // questions per hour
     private Integer speed;
 
     private Integer score;
 
-    private Integer grade;
+    private Integer totalMarks;
 
-    private Double avgSolvingTime;
+    private String grade;
 
-    private float maxSolvingTime;
+    private Double maxSolvingTime;
 
-    private float minSolvingTime;
+    private Double minSolvingTime;
 
     private Double percentage;
 }
